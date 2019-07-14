@@ -37,13 +37,13 @@ def ECMultiply(GenPoint,privKeyHex): #Double & add. Not true multiplication
             Q=ECAdd(Q,GenPoint);
     return (Q)
 
-PublicKey = ECMultiply(GPoint,privKey)
+publicKey = ECMultiply(GPoint,privKey)
 print "Private Key:";
 print privKey; print
 print "Public Key public key (uncompressed):";
-print PublicKey; print
+print publicKey; print
 print "Public Key (compressed):";
-if PublicKey[1] % 2 == 1: # If the Y coordinate of the Public Key is odd.
-    print "03"+str(hex(PublicKey[0])[2:-1]).zfill(64)
+if publicKey[1] % 2 == 1: # If the Y coordinate of the Public Key is odd.
+    print "03"+str(hex(publicKey[0])[2:-1]).zfill(64)
 else: # If the Y coordinate is even.
-    print "02"+str(hex(PublicKey[0])[2:-1]).zfill(64)
+    print "02"+str(hex(publicKey[0])[2:-1]).zfill(64)
