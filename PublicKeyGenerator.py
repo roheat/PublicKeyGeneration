@@ -40,7 +40,7 @@ def ECMultiply(GenPoint,privKeyHex): #Double & add. Not true multiplication
 publicKey = ECMultiply(GPoint,privKey)
 print "Private Key:";
 print privKey; print
-print "Public Key public key (uncompressed):";
+print "Public Key (uncompressed):";
 print publicKey; print
 print "Public Key (compressed):";
 if publicKey[1] % 2 == 1: # If the Y coordinate of the Public Key is odd.
